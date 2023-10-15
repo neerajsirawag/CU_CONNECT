@@ -1,0 +1,93 @@
+$cuRedDark: #ad0303;
+
+.topbar-main{
+    width: 100vw;
+    // position: fixed;
+    z-index: 999999;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(189, 189, 189, 0.221);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.112);
+
+    // justify-content: space-between;
+}
+.cuconnect-Logo{
+    margin-top: 0;
+    margin-left: 4vw;
+    width: 50px;
+    cursor: pointer;
+}
+
+.react-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 30%;  
+    margin-left: 5rem;
+}
+
+.react-icon{
+    width: 1.7rem;
+    cursor: pointer;
+    filter: invert(.5);
+    transition: .2s;
+}
+.react-icon:hover{
+    // color: $cuRedDark;
+    filter: invert(0);
+}
+
+.user-logo{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+}
+
+.popup-position {
+    position: absolute;
+    right: 10px;
+    top: 65px;
+    z-index: 99;
+  }
+
+  .search-results {
+    position: absolute;
+    left: 100px;
+    top: 60px;
+    width: 240px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #bbbbbb;
+  
+    .search-inner {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+  
+      .name {
+        font-family: system-ui;
+        font-size: 18px;
+      }
+    }
+  
+    .search-inner:hover {
+      background-color: #bbbbbb;
+    }
+  }

@@ -1,0 +1,262 @@
+// $linkedinBlue1: #0072b1;
+// $linkedinBlue2: #0073b1;
+// $linkedinBlue3: #004c75;
+
+// body {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// .login-wrapper {
+//   background-color: white !important;
+//   height: 100vh;
+//   .login-wrapper-inner {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//   }
+//   .heading {
+//     font-family: system-ui;
+//     font-weight: 500;
+//     color: rgba(0, 0, 0, 0.9);
+//   }
+
+//   .sub-heading {
+//     margin-top: -20px;
+//     font-family: system-ui;
+//   }
+// }
+
+// .login-btn {
+//   width: 300px;
+//   height: 50px;
+//   cursor: pointer;
+//   background-color: $linkedinBlue2;
+//   border-radius: 30px;
+//   outline: none;
+//   border: none;
+//   font-family: system-ui;
+//   font-weight: 600;
+//   color: #ffffff;
+//   font-size: 18px;
+//   margin-top: 20px;
+// }
+
+// .login-btn:hover {
+//   background-color: $linkedinBlue3;
+// }
+
+// .auth-inputs {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 10px;
+//   width: 300px;
+// }
+
+// .linkedinLogo {
+//   width: 80px;
+// }
+
+// .hr-text {
+//   line-height: 1em;
+//   position: relative;
+//   outline: 0;
+//   border: 0;
+//   color: black;
+//   text-align: center;
+//   height: 1.5em;
+//   opacity: 0.5;
+//   &:before {
+//     content: "";
+//     // use the linear-gradient for the fading effect
+//     // use a solid background color for a solid bar
+//     background: linear-gradient(to right, transparent, #818078, transparent);
+//     position: absolute;
+//     left: 0;
+//     top: 50%;
+//     width: 100%;
+//     height: 1px;
+//   }
+//   &:after {
+//     content: attr(data-content);
+//     position: relative;
+//     display: inline-block;
+//     color: black;
+
+//     padding: 0 0.5em;
+//     line-height: 1.5em;
+//     // this is really the only tricky part, you need to specify the background color of the container element...
+//     color: #818078;
+//     background-color: #fcfcfa;
+//   }
+// }
+
+// .google-btn-container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+
+//   .google-btn {
+//     width: 300px !important;
+//   }
+
+//   .go-to-signup {
+//     font-size: 18px;
+//   }
+
+//   .join-now {
+//     color: $linkedinBlue1;
+//     font-family: system-ui;
+//     cursor: pointer;
+//     font-size: 18px;
+//   }
+// }
+
+
+$cuRed: #ef0000;
+$cuRedDark: #cd0303;
+
+.body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.login-wrapper{
+    width: 99vw;
+    height: 97.5vh;
+    background-image: url('https://uims.cuchd.in/cuimsLogin-bg.png'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    .login-wrapper-inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .heading{
+        font-family: system-ui;
+        font-weight: 500;
+        font-size: 2.2rem;
+        color: rgba(0,0,0,0.9);
+    }
+    .sub-heading{
+        margin-top: -20px;
+        font-family: system-ui;
+        font-size: 1.2rem;
+    }
+}
+
+.cuconnectLogo{
+    margin-top: 1vh;
+    margin-left: 6vw;
+    width: 150px;
+}
+
+.auth-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+
+    .common-input{
+        height: 30px;
+        padding: 10px;
+        background-color: rgba(252, 252, 252, 0.125);
+        outline: none;
+        border: 1px solid #212121;
+        border-radius: 5px;
+        color: black;
+        font-family: system-ui;
+        font-size: 18px;
+        margin: 5px 0;
+        backdrop-filter: blur(2px);
+    }
+    .common-input:hover{
+        outline: 1.5px solid $cuRed;
+        border: 1px solid $cuRed;
+    }
+    .common-input:focus{
+        outline: 1.5px solid $cuRed;
+        border: 1px solid $cuRed;
+    }
+    ::placeholder{
+        color: black;
+        font-family: system-ui;
+        font-size: 15px;
+    }
+}
+
+.login-btn{
+    margin-top: 20px;
+    width: 400px;
+    height: 50px;
+    cursor: pointer;
+    background-color: $cuRed;
+    border: none;
+    border-radius: 40px;
+    font-family: system-ui;
+    font-size: 18px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.login-btn:hover{
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.382);
+    background-color: $cuRedDark;
+    // letter-spacing: .05em;
+}
+
+.hr-text {
+    line-height: 2px;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 1.5em;
+    opacity: .9;
+    &:before {
+      content: '';
+      background: linear-gradient(to right, transparent, #000000,#000000,#000000, transparent);
+      position: relative;
+      display: block;
+      margin: auto;
+      top: 50%;
+      width: 400px;
+      height: 1px;
+    }
+    &:after {
+      content: attr(data-content);
+      position: relative;
+      display: inline-block;
+      color: rgb(0, 0, 0);
+      padding: 0 .2em;
+      line-height: 1.5em;
+      background-color: #e5e1de;
+      backdrop-filter: blur(100px);
+      border-radius: 40px;
+    }
+  }
+
+  .google-btn{
+    width: 400px !important;
+    border-radius: 4px !important;
+    background-color: white !important;
+    color: black !important;
+  }
+ 
+  .go-to-signup{
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .join-now{
+    color: $cuRed;
+    font-family: system-ui;
+    cursor: pointer;
+  }
