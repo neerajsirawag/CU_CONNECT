@@ -1,10 +1,21 @@
 import React, { useState } from "react";
 import { LoginAPI , GoogleSignInAPI } from "../api/AuthAPI";
+
 import cuConnectLogo from "../assets/cuconnectLogo.png";
+import university_logo from "../assets/university_logo.png";
+import anydesk from "../assets/anydesk.png";
+import google from "../assets/google.png";
+import amazon from "../assets/amazon.png";
+import facebook from "../assets/facebook.png";
+import microsoft from "../assets/microsoft.webp";
+import netflix from "../assets/netflix.png";
+import oracle from "../assets/oracle.png";
+
 import { useNavigate } from "react-router-dom";
 import GoogleButton from "react-google-button";
 import "../Sass/LoginComponent.scss";
 import { toast } from "react-toastify";
+import Marquee from "react-fast-marquee";
 
 export default function LoginComponent() {
   let navigate = useNavigate();
@@ -33,11 +44,14 @@ export default function LoginComponent() {
   // };
   return (
     <div className="login-wrapper">
+    <div className="navbar">
       <img src={cuConnectLogo} className="cuconnectLogo" />
-
+      <img src={university_logo} className="universtiylogo" />
+    </div>
+      <div className="form">
       <div className="login-wrapper-inner">
         <h1 className="heading">Sign in</h1>
-        <p className="sub-heading">Stay updated on your professional world</p>
+        <p className="sub-heading">Stay updated with your collage life</p>
 
         <div className="auth-inputs">
           <input
@@ -60,9 +74,7 @@ export default function LoginComponent() {
         <button onClick={login} className="login-btn">
           Sign in
         </button>
-      </div>
       <hr className="hr-text" data-content="or" />
-      <div className="login-wrapper-inner">
         {/* <GoogleButton
           className="google-btn"
           onClick={googleSignIn}
@@ -71,6 +83,18 @@ export default function LoginComponent() {
           New to CU Connect? <span className="join-now" onClick={ () => navigate('/register')}>Join now</span>
         </p>
       </div>
+      </div>
+      <Marquee className="marquee">
+        <div className="logo-images">
+        <img src={amazon} alt="amazon-logo" className="amazon"/>
+        <img src={facebook} alt="facebook-logo" className="facebook"/>
+        <img src={google} alt="google-logo" className="google" />
+        <img src={microsoft} alt="microsoft-logo" className="microsoft"/>
+        <img src={oracle} alt="oracle-logo" className="oracle"/>
+        <img src={netflix} alt="netflix-logo" className="netflix"/>
+        <img src={anydesk} alt="anydesk-logo" className="anydesk"/>
+        </div>
+      </Marquee>
     </div>
   );
 }
